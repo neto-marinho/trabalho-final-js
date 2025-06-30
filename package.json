@@ -5,7 +5,7 @@
   "type": "module",
   "main": "trabalho.js",
   "scripts": {
-    "test": "npx mocha --require esm trabalho-final.js"
+    "test": "mocha trabalho-final.js"
   },
   "devDependencies": {
     "mocha": "^10.2.0"
