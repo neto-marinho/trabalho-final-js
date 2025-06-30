@@ -1,7 +1,7 @@
 name: Testes JavaScript
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   test:
@@ -13,13 +13,20 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
-        cache: 'npm'
+        node-version: '20'
 
     - name: Install dependencies
       run: npm install
 
-    - name: Run tests
-      run: npm test
+    - name: Run Mocha tests
+      run: npx mocha --require esm trabalho-final.js
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: |
+          test-results.xml
 
 
