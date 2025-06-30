@@ -1,0 +1,14 @@
+{
+  "name": "trabalho-final-js",
+  "version": "1.0.0",
+  "description": "Trabalho final de Fundamentos de JavaScript",
+  "type": "module",
+  "main": "trabalho.js",
+  "scripts": {
+    "test": "mocha --require esm trabalho-final.js"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "assert": "^2.0.0"
+  }
+}
